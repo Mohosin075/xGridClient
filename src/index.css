@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --primaryColor: rgb(37, 120, 180);
+  }
+
+.textColor{
+    color: var(--primaryColor);
+}
+.bgColor{
+    background-color: var(--primaryColor);
+}
+
+.primary-font{
+    font-family: "Russo One", sans-serif;
+}
+.secondary-font{
+    font-family: "Montserrat", sans-serif;
+}
