@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       <div className="2xl:px-48 xl:px-32 md:px-20 px-10 py-8">
-        <div className="grid md:grid-cols-2 2xl:grid-cols-4 md:justify-between  gap-8 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 md:justify-between  gap-8 md:gap-16">
           <div className="border-t-2 md:border-t-4 pt-4 md:pt-8 border-[#2578B4] w-full">
             <h3 className="text-black text-sm primary-font mb-2">
               LAS VEGAS, NV
@@ -81,7 +81,7 @@ const Footer = () => {
             <h3 className="text-black text-sm primary-font mb-2 mt-8">
               SIGN UP FOR OUR NEWSLETTER
             </h3>
-            <div className="w-80 flex justify-between border-2 rounded-md border-[#2578B4]">
+            <div className="w-full sm:w-80 flex justify-between border-2 rounded-md border-[#2578B4]">
               <input
                 placeholder="Email Address"
                 className="border-none outline-none w-full py-1 px-2 text-gray-400 hover:bg-gray-200 transition-all duration-300"
@@ -105,7 +105,7 @@ const Footer = () => {
                     <li className="border-r pr-2 cursor-pointer hover:text-black">TERMS</li>
                     <li className="border-r pr-2 cursor-pointer hover:text-black">ACCESSIBILITY</li>
                     <li className="border-r pr-2 cursor-pointer hover:text-black">SITE</li>
-                    <li className="border-r pr-2 cursor-pointer hover:text-black">MAP</li>
+                    <li className="cursor-pointer hover:text-black">MAP</li>
                 </div>
                 <div className="flex items-center flex-wrap font-semibold text-sm gap-2">
                     <p className="border-r pr-2">COPYRIGHT© 2024 DEALER SPIKE</p>
