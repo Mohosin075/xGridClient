@@ -19,3 +19,7 @@
 .secondary-font{
     font-family: "Montserrat", sans-serif;
 }
+
+.salesMenu:hover .salesIcon{
+    color: white;
+}

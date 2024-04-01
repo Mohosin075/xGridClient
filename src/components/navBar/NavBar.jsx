@@ -1,7 +1,82 @@
-import { FaArrowRight, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaArrowRight, FaBars, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const NavBar = () => {
+  const [isActive, setIsActive] = useState(true);
+  const navItem = (
+    <>
+      <li>
+        <Link
+          to={"/"}
+          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+        >
+          home
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/Sales"}
+          className="flex py-1 items-center salesMenu hover:bg-[#2578B4] hover:text-white px-2"
+        >
+          Sales{" "}
+          <span className="">
+            <MdOutlineKeyboardArrowDown className="textColor salesIcon" />
+          </span>
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/Rentals"}
+          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+        >
+          Rentals
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/Brands"}
+          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+        >
+          Brands
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/Financing"}
+          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+        >
+          Financing
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/News"}
+          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+        >
+          News
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/Gallery"}
+          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+        >
+          Gallery
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/Contact"}
+          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+        >
+          Contact
+        </Link>
+      </li>
+    </>
+  );
   return (
     <div className="">
       {/* top navbar */}
@@ -50,81 +125,37 @@ const NavBar = () => {
       </div>
 
       {/* main nav menu */}
-      <div>
-        <div className="2xl:px-48 xl:px-32 md:px-20 px-10 flex justify-between items-center bg-[#DDDDDD] text-sm text-black primary-font">
-          <div className="flex items-center gap-1 ml-16 cursor-pointer hover:text-[#2578B4]">
+      <div className="2xl:px-48 xl:px-32 md:px-20 px-10  bg-[#DDDDDD]">
+        <div className="flex justify-between items-center text-sm text-black primary-font">
+          <div className="flex items-center gap-1 xl:ml-16 cursor-pointer hover:text-[#2578B4]">
             <span className="textColor">
               <CiLocationOn />
             </span>
             <p>Map & Hours</p>
           </div>
-          <ul className="flex gap-10 font-bold secondary-font">
-            <li>
-              <Link
-                to={"/"}
-                className="hover:bg-[#2578B4] hover:text-white py-3 px-2"
-              >
-                home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/Sales"}
-                className="hover:bg-[#2578B4] hover:text-white py-3 px-2"
-              >
-                Sales
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/Rentals"}
-                className="hover:bg-[#2578B4] hover:text-white py-3 px-2"
-              >
-                Rentals
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/Brands"}
-                className="hover:bg-[#2578B4] hover:text-white py-3 px-2"
-              >
-                Brands
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/Financing"}
-                className="hover:bg-[#2578B4] hover:text-white py-3 px-2"
-              >
-                Financing
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/News"}
-                className="hover:bg-[#2578B4] hover:text-white py-3 px-2"
-              >
-                News
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/Gallery"}
-                className="hover:bg-[#2578B4] hover:text-white py-3 px-2"
-              >
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/Contact"}
-                className="hover:bg-[#2578B4] hover:text-white py-3 px-2"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
           <div>
+            <ul className="hidden xl:flex items-center gap-4 2xl:gap-10 font-bold secondary-font">
+              {navItem}
+            </ul>
+            <div className="xl:hidden py-1 lg:py-0">
+              {isActive ? (
+                <span
+                  onClick={() => setIsActive(!isActive)}
+                  className="text-4xl"
+                >
+                  <FaBars className="bg-[#2578B4] p-1 text-white" />
+                </span>
+              ) : (
+                <span
+                  onClick={() => setIsActive(!isActive)}
+                  className="text-4xl"
+                >
+                  <IoClose className="bg-[#2578B4] p-1 text-white" />
+                </span>
+              )}
+            </div>
+          </div>
+          <div className="hidden lg:block">
             <h4 className="flex items-center gap-2 text-white bgColor py-3 px-6 tracking-widest cursor-pointer hover:bg-black transition-all duration-300">
               Book Now{" "}
               <span>
@@ -132,6 +163,13 @@ const NavBar = () => {
               </span>
             </h4>
           </div>
+        </div>
+        <div
+          className={`transition-all duration-300 ease-in-out xl:hidden ${
+            isActive ? "opacity-0 h-0" : "opacity-100 h-96 mt-4"
+          }`}
+        >
+          <ul className="font-semibold secondary-font space-y-3">{navItem}</ul>
         </div>
       </div>
     </div>
