@@ -14,7 +14,7 @@ const Banner = () => {
           <h3 className="text-sm md:text-xl xl:text-3xl font-semibold">
             Find your Adventure Basecamp
           </h3>
-          <p className="text-xs md:text-sm xl:text-2xl font-semibold">
+          <p className="text-xs md:text-sm xl:text-2xl md:font-semibold">
             #SociallyDistant never felt so good
           </p>
         </div>

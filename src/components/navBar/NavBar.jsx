@@ -11,7 +11,7 @@ const NavBar = () => {
       <li>
         <Link onClick={()=>setIsActive(true)}
           to={"/"}
-          className="py-3 hover:bg-[#2578B4] hover:text-white px-2"
+          className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
           home
         </Link>
