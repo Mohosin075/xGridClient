@@ -18,6 +18,18 @@ const Banner = () => {
             #SociallyDistant never felt so good
           </p>
         </div>
+        <div className="absolute bottom-0 right-0 left-0 flex">
+          <img
+            className="hidden md:block w-1/2"
+            src="https://www.xgridcampers.com/images/xgridcampers-img-texture.png"
+            alt=""
+          />
+          <img
+            className="md:w-1/2"
+            src="https://www.xgridcampers.com/images/xgridcampers-img-texture.png"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );

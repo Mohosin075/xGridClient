@@ -23,6 +23,7 @@
 .salesMenu:hover .salesIcon{
     color: white;
 }
-.banner{
-    background-color: rgba(0, 0, 0, 1)0;
+.camperCard:hover .bars{
+    width: 100%;
+    border-radius: 0;
 }
