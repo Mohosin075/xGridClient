@@ -9,17 +9,17 @@ const NavBar = () => {
   const navItem = (
     <>
       <li>
-        <Link
+        <Link onClick={()=>setIsActive(true)}
           to={"/"}
-          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+          className="py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
           home
         </Link>
       </li>
       <li>
-        <Link
+        <Link onClick={()=>setIsActive(true)}
           to={"/Sales"}
-          className="flex py-1 items-center salesMenu hover:bg-[#2578B4] hover:text-white px-2"
+          className="flex py-1 xl:py-3 items-center salesMenu hover:bg-[#2578B4] hover:text-white px-2"
         >
           Sales{" "}
           <span className="">
@@ -28,49 +28,49 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link
+        <Link onClick={()=>setIsActive(true)}
           to={"/Rentals"}
-          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+          className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
           Rentals
         </Link>
       </li>
       <li>
-        <Link
+        <Link onClick={()=>setIsActive(true)}
           to={"/Brands"}
-          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+          className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
           Brands
         </Link>
       </li>
       <li>
-        <Link
+        <Link onClick={()=>setIsActive(true)}
           to={"/Financing"}
-          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+          className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
           Financing
         </Link>
       </li>
       <li>
-        <Link
+        <Link onClick={()=>setIsActive(true)}
           to={"/News"}
-          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+          className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
           News
         </Link>
       </li>
       <li>
-        <Link
+        <Link onClick={()=>setIsActive(true)}
           to={"/Gallery"}
-          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+          className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
           Gallery
         </Link>
       </li>
       <li>
-        <Link
+        <Link onClick={()=>setIsActive(true)}
           to={"/Contact"}
-          className="flex py-1 hover:bg-[#2578B4] hover:text-white px-2"
+          className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
           Contact
         </Link>
@@ -134,7 +134,7 @@ const NavBar = () => {
             <p>Map & Hours</p>
           </div>
           <div>
-            <ul className="hidden xl:flex items-center gap-4 2xl:gap-10 font-bold secondary-font">
+            <ul className="hidden xl:flex items-center uppercase gap-4 2xl:gap-10 font-bold secondary-font">
               {navItem}
             </ul>
             <div className="xl:hidden py-1 lg:py-0">
@@ -169,7 +169,7 @@ const NavBar = () => {
             isActive ? "opacity-0 h-0" : "opacity-100 h-96 mt-4"
           }`}
         >
-          <ul className="font-semibold secondary-font space-y-3">{navItem}</ul>
+          <ul className="font-semibold secondary-font uppercase space-y-3">{navItem}</ul>
         </div>
       </div>
     </div>
