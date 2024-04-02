@@ -1,3 +1,5 @@
+import Slider from "../slider/Slider";
+
 const FindCamper = () => {
   return (
     <div className="2xl:px-48 xl:px-32 md:px-20 px-10 primary-font">
@@ -51,6 +53,10 @@ const FindCamper = () => {
             <div className="w-1/3 h-4 bgColor absolute bottom-0 right-0 bars transition-all duration-300 rounded-tl-xl cursor-pointer"></div>
           </div>
         </div>
+      </div>
+      {/* slider */}
+      <div className="my-10 lg:h-[350px] xl:h-[420px] hidden lg:block">
+          <Slider></Slider>
       </div>
     </div>
   );
