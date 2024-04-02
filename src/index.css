@@ -30,3 +30,6 @@
 .instaCard:hover .socialIcon{
     opacity: 10;
 }
+.brandCard:hover .brandHover{
+    opacity: 0;
+}

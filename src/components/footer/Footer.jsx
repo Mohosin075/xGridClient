@@ -104,8 +104,7 @@ const Footer = () => {
                     <li className="border-r pr-2 cursor-pointer hover:text-black">PRIVACY</li>
                     <li className="border-r pr-2 cursor-pointer hover:text-black">TERMS</li>
                     <li className="border-r pr-2 cursor-pointer hover:text-black">ACCESSIBILITY</li>
-                    <li className="border-r pr-2 cursor-pointer hover:text-black">SITE</li>
-                    <li className="cursor-pointer hover:text-black">MAP</li>
+                    <li className="cursor-pointer hover:text-black">SITE MAP</li>
                 </div>
                 <div className="flex items-center flex-wrap font-semibold text-sm gap-2">
                     <p className="border-r pr-2">COPYRIGHT© 2024 DEALER SPIKE</p>

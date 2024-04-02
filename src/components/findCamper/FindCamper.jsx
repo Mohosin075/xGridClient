@@ -4,7 +4,7 @@ const FindCamper = () => {
     <div className="2xl:px-48 xl:px-32 md:px-20 px-10 primary-font">
       <div>
         <div className="relative my-10">
-          <h2 className="text-3xl lg:text-5xl text-center text-black font-semibold">
+          <h2 className="text-xl lg:text-5xl text-center text-black font-semibold">
             FIND YOUR CAMPER
           </h2>
         </div>

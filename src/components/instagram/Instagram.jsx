@@ -3,7 +3,7 @@ import { FaFacebook, FaPinterest, FaTwitter } from "react-icons/fa";
 const Instagram = () => {
   return (
     <div>
-      <h2 className="primary-font text-[#2578B4] text-3xl mb-3 ml-4">
+      <h2 className="primary-font text-[#2578B4] text-xl md:text-3xl mb-3 ml-4">
         XGRiD On Instagram
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 justify-between items-center gap-2">
