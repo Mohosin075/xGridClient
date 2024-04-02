@@ -1,6 +1,7 @@
 import Banner from "../../components/banner/Banner";
 import FindCamper from "../../components/findCamper/FindCamper";
 import InventoryMakes from "../../components/inventoryMakes/InventoryMakes";
+import NewsExperience from "../../components/newsExperience/NewsExperience";
 import Slider from "../../components/slider/Slider";
 import XGide from "../../components/xGide/XGide";
 
@@ -19,6 +20,8 @@ const Home = () => {
       </div>
       {/* xGide */}
       <XGide></XGide>
+      {/* news experience */}
+      <NewsExperience></NewsExperience>
     </div>
   );
 };
