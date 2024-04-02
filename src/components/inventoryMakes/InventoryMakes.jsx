@@ -1,6 +1,7 @@
 const InventoryMakes = () => {
   return (
-    <div className="2xl:px-48 xl:px-32 md:px-20 px-10 space-y-7 my-10 flex justify-center flex-wrap gap-8 items-center">
+    <div className="relative">
+    <div className="2xl:px-48 xl:px-32 md:px-20 px-10 space-y-7 mt-10 mb-16 flex justify-center flex-wrap gap-8 items-center">
       <a href="">
         <img
           className="w-full md:w-20 xl:w-24"
@@ -44,6 +45,8 @@ const InventoryMakes = () => {
         />{" "}
       </a>
     </div>
+    </div>
+
   );
 };
 

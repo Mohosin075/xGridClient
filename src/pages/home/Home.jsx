@@ -2,6 +2,7 @@ import Banner from "../../components/banner/Banner";
 import FindCamper from "../../components/findCamper/FindCamper";
 import InventoryMakes from "../../components/inventoryMakes/InventoryMakes";
 import Slider from "../../components/slider/Slider";
+import XGide from "../../components/xGide/XGide";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
         {/* inventory makes */}
         <InventoryMakes></InventoryMakes>
       </div>
+      {/* xGide */}
+      <XGide></XGide>
     </div>
   );
 };

@@ -78,7 +78,7 @@ const NavBar = () => {
     </>
   );
   return (
-    <div className="">
+    <div className="xl:sticky top-0 z-50 bg-white">
       {/* top navbar */}
       <div className="2xl:px-48 xl:px-32 md:px-20 px-10 flex justify-between items-center py-5">
         <div>
