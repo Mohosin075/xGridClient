@@ -12,7 +12,7 @@ import "./style.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-export default function App() {
+export default function Slider() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
