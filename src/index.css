@@ -27,3 +27,6 @@
     width: 100%;
     border-radius: 0;
 }
+.instaCard:hover .socialIcon{
+    opacity: 10;
+}

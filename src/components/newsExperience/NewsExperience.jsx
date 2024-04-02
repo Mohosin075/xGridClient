@@ -1,6 +1,6 @@
 const NewsExperience = () => {
   return (
-    <div className="2xl:px-48 xl:px-32 md:px-20 px-10 secondary-font xl:flex justify-between gap-36 my-28 xl:space-y-0 space-y-10">
+    <div className="2xl:px-48 xl:px-32 md:px-20 px-10 secondary-font xl:flex justify-between gap-36 my-20 xl:space-y-0 space-y-10">
       <div className="w-full">
         <h2 className="primary-font text-[#2578B4] text-3xl mb-3">
           XGRiD News
@@ -88,6 +88,7 @@ const NewsExperience = () => {
             </div>
           </div>
         </div>
+        <h2 className="text-sm text-[#2578B4] font-bold mt-3 md:mt-7 cursor-pointer hover:text-black">Read More</h2>
       </div>
       <div className="w-full">
         <h2 className="primary-font text-[#2578B4] text-3xl mb-3">
@@ -176,6 +177,7 @@ const NewsExperience = () => {
             </div>
           </div>
         </div>
+        <h2 className="text-sm text-[#2578B4] font-bold mt-3 md:mt-7 cursor-pointer hover:text-black">Read All</h2>
       </div>
     </div>
   );

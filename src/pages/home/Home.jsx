@@ -1,5 +1,6 @@
 import Banner from "../../components/banner/Banner";
 import FindCamper from "../../components/findCamper/FindCamper";
+import Instagram from "../../components/instagram/Instagram";
 import InventoryMakes from "../../components/inventoryMakes/InventoryMakes";
 import NewsExperience from "../../components/newsExperience/NewsExperience";
 import Slider from "../../components/slider/Slider";
@@ -22,6 +23,8 @@ const Home = () => {
       <XGide></XGide>
       {/* news experience */}
       <NewsExperience></NewsExperience>
+      {/* xGrid on Instagram */}
+      <Instagram></Instagram>
     </div>
   );
 };
