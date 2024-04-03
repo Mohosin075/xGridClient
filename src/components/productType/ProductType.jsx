@@ -2,9 +2,9 @@ import SectionTitle from "../../utility/SectionTitle";
 
 const ProductType = () => {
   return (
-    <div>
+    <div className="hidden md:block">
       <SectionTitle titleTxt={"product types"}></SectionTitle>
-      <div className="grid xl:grid-cols-3 justify-between items-center gap-5 space-y-5 lg:space-y-0 mt-1">
+      <div className="md:flex justify-between items-center gap-5 space-y-5 md:space-y-0">
         <div className="relative text-white camperCard w-full">
           <img
             className="w-full"
@@ -12,7 +12,7 @@ const ProductType = () => {
             alt=""
           />
           <div className="absolute right-0 top-0 bottom-0 left-0 bg-[rgba(0,0,0,0.5)] hover:bg-[rgba(0,0,0,0.4)] transition-all duration-100 cursor-pointer flex flex-col justify-center items-end pr-6">
-            <h3 className="uppercase text-2xl font-bold w-1/3 text-right">MOd kit bundle</h3>
+            <h3 className="uppercase text-xl xl:text-2xl font-bold xl:w-1/3 text-right">MOd kit bundle</h3>
             <p className="font-bold text-lg">+ shop now</p>
           </div>
           <div className="w-1/3 h-4 bgColor absolute bottom-0 right-0 bars transition-all duration-300 rounded-tl-xl cursor-pointer"></div>
@@ -24,7 +24,7 @@ const ProductType = () => {
             alt=""
           />
           <div className="absolute right-0 top-0 bottom-0 left-0 bg-[rgba(0,0,0,0.5)] hover:bg-[rgba(0,0,0,0.4)] transition-all duration-100 cursor-pointer flex flex-col justify-center items-end pr-6">
-            <h3 className="uppercase text-2xl font-bold w-1/3 text-right">MOd kit bundle</h3>
+            <h3 className="uppercase text-xl xl:text-2xl font-bold xl:w-1/3 text-right">MOd kit bundle</h3>
             <p className="font-bold text-lg">+ shop now</p>
           </div>
           <div className="w-1/3 h-4 bgColor absolute bottom-0 right-0 bars transition-all duration-300 rounded-tl-xl cursor-pointer"></div>
@@ -36,7 +36,7 @@ const ProductType = () => {
             alt=""
           />
           <div className="absolute right-0 top-0 bottom-0 left-0 bg-[rgba(0,0,0,0.5)] hover:bg-[rgba(0,0,0,0.4)] transition-all duration-100 cursor-pointer flex flex-col justify-center items-end pr-6">
-            <h3 className="uppercase text-2xl font-bold w-1/3 text-right">MOd kit bundle</h3>
+            <h3 className="uppercase text-xl xl:text-2xl font-bold xl:w-1/3 text-right">MOd kit bundle</h3>
             <p className="font-bold text-lg">+ shop now</p>
           </div>
           <div className="w-1/3 h-4 bgColor absolute bottom-0 right-0 bars transition-all duration-300 rounded-tl-xl cursor-pointer"></div>
