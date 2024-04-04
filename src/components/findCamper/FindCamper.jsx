@@ -9,10 +9,10 @@ const FindCamper = () => {
             FIND YOUR CAMPER
           </h2>
         </div>
-        <div className="lg:flex justify-between items-center gap-5 space-y-5 lg:space-y-0">
-          <Link to={"/Sales"} className="relative text-white camperCard w-full">
+        <div className="lg:flex justify-between items-center gap-5 mb-4 space-y-5 lg:space-y-0">
+          <Link to={"/Sales"} className="relative h-full text-white camperCard w-full">
               <img
-                className="w-full"
+                className="w-full h-full"
                 src="https://cdn.dealerspike.com/imglib/v1/300x225/imglib/Assets/Inventory/64/EB/64EB0076-CD82-4DDF-A8E7-25780E7787F0.jpg"
                 alt=""
               />

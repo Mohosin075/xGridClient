@@ -1,7 +1,22 @@
 import { FaSearch } from "react-icons/fa";
 import SectionTitle from "../../utility/SectionTitle";
+import { useEffect, useState } from "react";
+import Inventory from "../inventory/Inventory";
 
 const ShopAll = () => {
+  const [allInventory, setAllInventory] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/allInventory")
+      .then((response) => response.json())
+      .then((data) => {
+        setAllInventory(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+  console.log(allInventory);
+
   return (
     <div className="my-10 secondary-font">
       <SectionTitle titleTxt={"shop all"}></SectionTitle>
@@ -267,39 +282,9 @@ const ShopAll = () => {
         </div>
         <div className="md:w-9/12">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 justify-between gap-5">
-            <div className="w-full">
-              <img
-                className="w-full sm:h-44 lg:h-56"
-                src="https://cdn.dealerspike.com/imglib/v1/300x225/imglib/Assets/Inventory/64/EB/64EB0076-CD82-4DDF-A8E7-25780E7787F0.jpg"
-                alt=""
-              />
-              <h3 className="text-lg xl:text-xl 2xl:text-2xl font-semibold">
-                2023 Australian Off Road Sinergi
-              </h3>
-              <p className="text-xs md:text-sm text-[#2578B4]">$127,900.00</p>
-            </div>
-            <div className="w-full">
-              <img
-                className="w-full  sm:h-44 lg:h-56"
-                src="https://i.ibb.co/hYtGYK9/pexels-pixabay-210010-1.jpg"
-                alt=""
-              />
-              <h3 className="text-lg xl:text-xl 2xl:text-2xl font-semibold">
-                2023 Australian Off Road Sinergi
-              </h3>
-              <p className="text-xs md:text-sm text-[#2578B4]">$127,900.00</p>
-            </div>
-            <div className="w-full">
-              <img
-                className="w-full  sm:h-44 lg:h-56"
-                src="https://i.ibb.co/hYtGYK9/pexels-pixabay-210010-1.jpg"
-                alt=""
-              />
-              <h3 className="text-lg xl:text-xl 2xl:text-2xl font-semibold">
-                2023 Australian Off Road Sinergi
-              </h3>
-              <p className="text-xs md:text-sm text-[#2578B4]">$127,900.00</p>
-            </div>
+            {
+              allInventory.map((inventory)=><Inventory key={inventory._id} inventory={inventory}></Inventory>)
+            }
           </div>
         </div>
       </div>
