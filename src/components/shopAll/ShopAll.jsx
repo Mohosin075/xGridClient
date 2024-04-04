@@ -15,7 +15,6 @@ const ShopAll = () => {
         console.error("Error fetching data:", error);
       });
   }, []);
-  console.log(allInventory);
 
   return (
     <div className="my-10 secondary-font">

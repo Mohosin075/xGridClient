@@ -9,6 +9,7 @@ import Financing from "../pages/financing/Financing";
 import News from "../pages/news/News";
 import Contact from "../pages/contact/Contact";
 import Gallery from "../pages/gallery/Gallery";
+import InventoryDetails from "../components/inventoryDetails/InventoryDetails";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/Sales",
         element: <Sales></Sales>,
+      },
+      {
+        path: "/inventory/:id",
+        element: <InventoryDetails></InventoryDetails>,
       },
       {
         path: "/Rentals",
