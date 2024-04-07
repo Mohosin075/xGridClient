@@ -9,14 +9,14 @@ const NewsExperience = () => {
 
 
   useEffect(()=>{
-    fetch('http://localhost:5000/experience')
+    fetch('https://x-grid-server.vercel.app/experience')
     .then(res=>res.json())
     .then(data=>{
       setExperience(data);
     })
   },[])
   useEffect(()=>{
-    fetch('http://localhost:5000/news')
+    fetch('https://x-grid-server.vercel.app/news')
     .then(res=>res.json())
     .then(data=>{
       setNews(data);

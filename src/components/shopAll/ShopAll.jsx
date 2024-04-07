@@ -67,7 +67,7 @@ const ShopAll = ({ brandInventory }) => {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:5000/searchInventory?${searchQurey}`
+          `https://x-grid-server.vercel.app/searchInventory?${searchQurey}`
         );
         const data = await res.json();
         setLoadSearchData(data);

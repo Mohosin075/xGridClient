@@ -6,7 +6,7 @@ import ShopByBrands from "../../components/shopByBrand/ShopByBrands";
 const Sales = () => {
     const [brandInventory, setBrandInventory] = useState([]);
         const handleShopByBrand =(brandName)=>{
-            fetch(`http://localhost:5000/brandInventory?brand=${brandName}`)
+            fetch(`https://x-grid-server.vercel.app/brandInventory?brand=${brandName}`)
             .then(res=>res.json())
             .then(data=>{
               setBrandInventory(data);
