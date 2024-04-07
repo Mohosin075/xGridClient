@@ -1,8 +1,9 @@
+import RouteWorning from "../../utility/RouteWorning";
 
 const Rentals = () => {
     return (
         <div>
-            rentals
+            <RouteWorning txt={'rentals'}></RouteWorning>
         </div>
     );
 };

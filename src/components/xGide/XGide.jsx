@@ -1,3 +1,4 @@
+import  Swal  from 'sweetalert2';
 const XGide = () => {
   return (
     <div>
@@ -38,7 +39,12 @@ const XGide = () => {
             </p>
             
           </div>
-          <button className="text-sm md:text-xl font-semibold uppercase hover:underline lg:pt-16 hover:translate-x-2 duration-300">Learn More +</button>
+          <button  onClick={() =>
+            Swal.fire({
+              title: "Work in progress!",
+              text: "try later",
+              icon: "warning",
+            })} className="text-sm md:text-xl font-semibold uppercase hover:underline lg:pt-16 hover:translate-x-2 duration-300">Learn More +</button>
         </div>
         <div className="absolute bottom-0 right-0 left-0 flex">
           <img

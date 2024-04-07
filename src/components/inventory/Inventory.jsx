@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const Inventory = ({ inventory }) => {
-  const {_id,title, price, image} = inventory
+  const {_id,title, price, image, manufacturers} = inventory
   return (
     <Link to={`/inventory/${_id}`} className="w-full">
       <img
@@ -10,10 +10,10 @@ const Inventory = ({ inventory }) => {
         src={image}
         alt=""
       />
-      <h3 className="text-lg xl:text-xl 2xl:text-2xl font-semibold">
+      <h3 className="text-lg xl:text-xl 2xl:text-2xl font-semibold  hover:underline">
         {title}
       </h3>
-      <p className="text-xs md:text-sm text-[#2578B4]">${price}</p>
+      <p className="text-xs md:text-sm text-[#2578B4]">${price} | brand : {manufacturers}</p>
     </Link>
   );
 };

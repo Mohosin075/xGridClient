@@ -2,14 +2,38 @@ import { FaArrowRight, FaBars, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 const NavBar = () => {
   const [isActive, setIsActive] = useState(true);
+
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const navigate = useNavigate();
+
+  const handleSubmit =(e)=>{
+    e.preventDefault()
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('searchTerm', searchTerm);
+    const searchQuery = urlParams.toString();
+    navigate(`/search?${searchQuery}`)
+  }
+
+
+  useEffect(()=>{
+    const urlParams = new URLSearchParams(location.search);
+    const searchTermFromURL = urlParams.get('searchTerm');
+    if(searchTermFromURL){
+      setSearchTerm(searchTermFromURL)
+    }
+  },[location.search])
+
+
   const navItem = (
     <>
       <li>
-        <Link onClick={()=>setIsActive(true)}
+        <Link
+          onClick={() => setIsActive(true)}
           to={"/"}
           className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
@@ -17,7 +41,8 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link onClick={()=>setIsActive(true)}
+        <Link
+          onClick={() => setIsActive(true)}
           to={"/Sales"}
           className="flex py-1 xl:py-3 items-center salesMenu hover:bg-[#2578B4] hover:text-white px-2"
         >
@@ -28,7 +53,8 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link onClick={()=>setIsActive(true)}
+        <Link
+          onClick={() => setIsActive(true)}
           to={"/Rentals"}
           className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
@@ -36,7 +62,8 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link onClick={()=>setIsActive(true)}
+        <Link
+          onClick={() => setIsActive(true)}
           to={"/Brands"}
           className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
@@ -44,7 +71,8 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link onClick={()=>setIsActive(true)}
+        <Link
+          onClick={() => setIsActive(true)}
           to={"/Financing"}
           className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
@@ -52,7 +80,8 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link onClick={()=>setIsActive(true)}
+        <Link
+          onClick={() => setIsActive(true)}
           to={"/News"}
           className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
@@ -60,7 +89,8 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link onClick={()=>setIsActive(true)}
+        <Link
+          onClick={() => setIsActive(true)}
           to={"/Gallery"}
           className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
@@ -68,7 +98,8 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link onClick={()=>setIsActive(true)}
+        <Link
+          onClick={() => setIsActive(true)}
           to={"/Contact"}
           className="flex py-1 xl:py-3 hover:bg-[#2578B4] hover:text-white px-2"
         >
@@ -83,11 +114,13 @@ const NavBar = () => {
       <div className="2xl:px-48 xl:px-32 md:px-20 px-10 flex justify-between items-center py-5">
         <div>
           {/* todo-1 */}
-          <img
-            className="w-36 lg:w-48 cursor-pointer"
-            src="https://www.xgridcampers.com/images/xgridcampers-logo.png"
-            alt="logo"
-          />
+          <a href="">
+            <img
+              className="w-36 lg:w-48 cursor-pointer"
+              src="https://www.xgridcampers.com/images/xgridcampers-logo.png"
+              alt="logo"
+            />
+          </a>
         </div>
         <div className="hidden sm:flex justify-between items-center gap-10 text-center">
           <div className="border-x-2 px-10">
@@ -108,19 +141,21 @@ const NavBar = () => {
           </div>
         </div>
         <div className="hidden xl:block">
-          <div className="w-80 flex justify-between border-2 rounded-md border-[#2578B4]">
+          <form onSubmit={handleSubmit} className="w-80 flex justify-between border-2 rounded-md border-[#2578B4]">
             <input
               placeholder="search inventory"
               className="border-none outline-none w-full py-1 px-2 text-gray-400 hover:bg-gray-200 transition-all duration-300"
               type="text"
+              value={searchTerm}
+              onChange={(e)=>setSearchTerm(e.target.value)}
             />
-            <label
+            <button
               htmlFor="search"
               className="bgColor py-1 px-4 text-white font-bold hover:bg-black cursor-pointer"
             >
               Go
-            </label>
-          </div>
+            </button>
+          </form>
         </div>
       </div>
 
@@ -169,7 +204,9 @@ const NavBar = () => {
             isActive ? "opacity-0 h-0" : "opacity-100 h-96 mt-4"
           }`}
         >
-          <ul className="font-semibold secondary-font uppercase space-y-3">{navItem}</ul>
+          <ul className="font-semibold secondary-font uppercase space-y-3">
+            {navItem}
+          </ul>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ const InventoryDetails = () => {
   const { id } = useParams();
   const [details, setDetails] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/allInventory/${id}`)
+    fetch(`https://x-grid-server.vercel.app/allInventory/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setDetails(data);
@@ -18,7 +18,7 @@ const InventoryDetails = () => {
   return (
     <div className="2xl:px-48 xl:px-32 md:px-20 px-10 my-10 md:w-3/4 mx-auto secondary-font">
       <div className="card lg:card-side bg-base-100 shadow-xl">
-        <img src={details?.image} alt="Album" />
+        <img src={details?.image} className="w-1/2" alt="Album" />
         <div className="card-body">
           <h2 className="card-title">{details?.title}</h2>
           <p className="text-sm">{details?.short_desc}</p>
@@ -43,7 +43,7 @@ const InventoryDetails = () => {
             {details?.chassis}
           </p>
           <div className="card-actions justify-end">
-            <div className="hidden lg:block">
+            <div>
               <h4 className="flex items-center gap-2 text-white bgColor py-3 px-6 tracking-widest cursor-pointer hover:bg-black transition-all duration-300">
                 Order Now{" "}
                 <span>

@@ -1,8 +1,9 @@
+import RouteWorning from "../../utility/RouteWorning";
 
 const Contact = () => {
     return (
         <div>
-            contact
+            <RouteWorning txt={'contact'}></RouteWorning>
         </div>
     );
 };

@@ -1,8 +1,9 @@
+import RouteWorning from "../../utility/RouteWorning";
 
 const Gallery = () => {
     return (
         <div>
-            gallery
+            <RouteWorning txt={'gallery'}></RouteWorning>
         </div>
     );
 };

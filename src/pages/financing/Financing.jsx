@@ -1,8 +1,9 @@
+import RouteWorning from "../../utility/RouteWorning";
 
 const Financing = () => {
     return (
         <div>
-            financing
+            <RouteWorning txt={'financing'}></RouteWorning>
         </div>
     );
 };
